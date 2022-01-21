@@ -654,21 +654,21 @@ const loader = setInterval(() => {
       /* get the notes and upload it */
       /* only upload notes if there is any */
       notes = getNotesIfAny();
-      if (notes.length > 0) {
-        setTimeout(function () {
-          if (notes != undefined && notes.length != 0) {
-            console.log('Create Notes');
-            // means we can upload the notes too
-            uploadGit(
-              btoa(unescape(encodeURIComponent(notes))),
-              problemName,
-              'NOTES.md',
-              createNotesMsg,
-              'upload',
-            );
-          }
-        }, 500);
-      }
+      // if (notes.length > 0) {
+      //   setTimeout(function () {
+      //     if (notes != undefined && notes.length != 0) {
+      //       console.log('Create Notes');
+      //       // means we can upload the notes too
+      //       uploadGit(
+      //         btoa(unescape(encodeURIComponent(notes))),
+      //         problemName,
+      //         'NOTES.md',
+      //         createNotesMsg,
+      //         'upload',
+      //       );
+      //     }
+      //   }, 500);
+      // }
 
       /* Upload code to Git */
       setTimeout(function () {
